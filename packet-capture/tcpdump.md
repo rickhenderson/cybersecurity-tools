@@ -28,3 +28,4 @@ To  print  all  IPv4 HTTP packets to and from port 80, i.e. print only packets t
 ```
    $ tcpdump 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
 ```
+Some information in this tutorial was taken from <a href="https://opensource.com/article/18/10/introduction-tcpdump">An Introduction to using tcpdump at the Linux command line</a>.

@@ -22,3 +22,9 @@ Capture 10 packets using the Count flag.
     $ tcpdump -i wls1 -c10 -nn
  ```
  
+## NOTES
+Check the `man` pages.
+To  print  all  IPv4 HTTP packets to and from port 80, i.e. print only packets that contain data, not, for example, SYN and FIN packets and ACK-only packets.  (IPv6 is left as an exercise for the reader.)
+```
+   $ tcpdump 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
+```

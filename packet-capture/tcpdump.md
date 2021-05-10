@@ -25,6 +25,11 @@ Capture 10 packets using the Count flag.
  ## Filtering
  ``` $ sudo tcpdump -i any -c100 -n ICMP ```
  
+ Output captured packets in ASCII, useful for debugging web requests.
+ ``` $ sudo tcpdump -c100 -n -A port 80 ```
+ Write captured packets to a ```pcap``` file. These files can be read by Wireshark and examined later.
+ ``` $ sudo tcpdump -w webtraffic.pcap port 80 ```
+ 
  
  
 ## NOTES
